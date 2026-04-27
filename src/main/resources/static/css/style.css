@@ -3,13 +3,52 @@
 }
 
 .wrapper{
-    height: 100vh;
     display: flex;
 }
 
 .side_bar{
+    height: 100vh;
     width: 300px;
     background-color: #253141;
+}
+
+.side_header{
+    display: flex;
+    height: 100px;
+    padding: 0 20px;
+    background-color: #253141;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user_name a{
+    font-size: 16px;
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.create_box a{
+    font-size: 10px;
+    color: deepskyblue;
+    border: 1px solid lightblue;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.rooms{
+    height: calc(100vh - 100px);
+    background-color: #83b7fc;
+    padding: 0 20px;
+    overflow: scrollo;
+}
+
+.room{
+    padding: 20px 0 40px;
+}
+
+.chat_rooms_name a{
+    color: white;
+    text-decoration: none;
 }
 
 .main_chat{
@@ -34,16 +73,4 @@
     height: 90px;
     background-color: #ddd;
     padding: 20px 40px ;
-}
-
-.side_header{
-    height: 100px;
-    background-color: #253141;
-    padding: 0 20px;
-}
-
-.rooms{
-    height: calc(100vh - 100px);
-    background-color: #2F3E51;
-    padding: 0 20px;
 }
