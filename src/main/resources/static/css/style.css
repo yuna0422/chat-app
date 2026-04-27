@@ -1,3 +1,49 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+}
+
+.side_bar{
+    width: 300px;
+    background-color: #253141;
+}
+
+.main_chat{
+    display: block;
+    width: calc(100vw - 300px);
+    background-color: #fff;
+}
+
+.main_header{
+    height: 100px;
+    background-color: #fff;
+    padding: 0 40px;
+}
+
+.main_talk{
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 46px 40px 0 ; 
+}
+
+.form{
+    height: 90px;
+    background-color: #ddd;
+    padding: 20px 40px ;
+}
+
+.side_header{
+    height: 100px;
+    background-color: #253141;
+    padding: 0 20px;
+}
+
+.rooms{
+    height: calc(100vh - 100px);
+    background-color: #2F3E51;
+    padding: 0 20px;
+}
