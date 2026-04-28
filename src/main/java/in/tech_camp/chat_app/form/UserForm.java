@@ -1,11 +1,12 @@
-package in.tech_camp.chat_app.entity;
+package in.tech_camp.chat_app.form;
 
 import lombok.Data;
 
 @Data
-public class UserEntity {
+public class UserForm {
     private Integer id;
     private String name;
     private String email;
     private String password;
+    private String passwordConfirmation;
 }
