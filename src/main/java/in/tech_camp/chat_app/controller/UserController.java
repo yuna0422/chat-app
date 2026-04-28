@@ -34,7 +34,7 @@ public class UserController {
         return "users/signUp";
     }
     
-    @PostMapping("/users")
+    @PostMapping("/user")
     public String createUser(@ModelAttribute("userForm") UserForm userForm,Model model ){
     UserEntity userEntity = new UserEntity();
     userEntity.setName(userForm.getName());
