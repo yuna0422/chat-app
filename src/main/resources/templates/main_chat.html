@@ -1,0 +1,36 @@
+<div th:fragment="main_chat">
+    <div class="main_header">
+        <div class="chat_title">hogefuga</div>
+        <div class="exit">
+            <a href="#">チャットを終了する</a>
+        </div>
+    </div>
+    <div class="main_talk">
+        <div class="messages">
+            <div class="message">
+                <div class="meta">
+                    <div class="name">Tom</div>
+                    <div class="data">2020/3/31(Wed)12:43:30</div>
+                </div>
+                <p>おはよう</p>
+            </div>
+            <div class="message">
+                <div class="meta">
+                    <div class="name">Tom</div>
+                    <div class="data">2020/3/31(Wed)12:43:30</div>
+                </div>
+                <p>こんばんは</p>
+            </div>
+        </div>
+    </div> 
+    <div class="form">
+        <div class="form-input">
+            <input type="text" placeholder="type a message" class="type_message">
+            <label class="form-image">
+                <span class="image-file">画像</span>
+                <input type="file" class="hidden">
+            </label>
+        </div>
+        <input type="submit" value="送信" class="send">
+    </div>
+</div>
