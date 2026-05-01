@@ -73,12 +73,15 @@
     color: #333;
 }
 
-.exit a{
-    border: 1px solid darkred;
-    color: darkred;
-    padding: 20px;
-    text-decoration: none;
+.header-button input[type="submit"] {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
 }
+
 /*トーク画面*/
 .messages{
     height: calc(100vh - 100px - 90px);
