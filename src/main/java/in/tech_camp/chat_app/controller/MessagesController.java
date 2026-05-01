@@ -42,14 +42,18 @@ public class MessagesController {
         UserEntity user= userRepository.findById(currentUser.getId());
 
         model.addAttribute("user",user);
+
         List<RoomUserEntity> roomUserEntities = roomUserRepository.findByUserId(currentUser.getId());
         List<RoomEntity> roomList = roomUserEntities.stream()
                         .map(RoomUserEntity::getRoom)
                         .collect(Collectors.toList());
         model.addAttribute("rooms",roomList);
+
         model.addAttribute("messageForm", new MessageForm());
         model.addAttribute("roomId",roomId);
 
+        List<MessageEntity> messages = messageRepository.findByRoomId(roomId);
+        model.addAttribute("messages",messages);
         return "messages/index";
     }
 

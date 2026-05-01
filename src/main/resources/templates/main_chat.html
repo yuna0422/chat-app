@@ -5,24 +5,19 @@
             <a href="#">チャットを終了する</a>
         </div>
     </div>
-    <div class="main_talk">
+    
         <div class="messages">
-            <div class="message">
+            <div th:each="message : ${messages}" class="message">
                 <div class="meta">
-                    <div class="name">Tom</div>
-                    <div class="data">2020/3/31(Wed)12:43:30</div>
+                    <div class="name" th:text="${message.user.name}">ユーザー名</div>
+                    <div class="data" th:text="${message.createdAt}">日付</div>
                 </div>
-                <p>おはよう</p>
-            </div>
-            <div class="message">
-                <div class="meta">
-                    <div class="name">Tom</div>
-                    <div class="data">2020/3/31(Wed)12:43:30</div>
+                <div class="lower-message">
+                    <div class="message-content" th:text="${message.content}">メッセージ内容</div>
                 </div>
-                <p>こんばんは</p>
             </div>
         </div>
-    </div> 
+
     <form th:action="@{/rooms/{roomId}/messages(roomId=${roomId})}" method="post" th:object="${messageForm}" class="form">
         <div class="form-input">
             <input th:field="*{content}" placeholder="type a message" class="type_message">
