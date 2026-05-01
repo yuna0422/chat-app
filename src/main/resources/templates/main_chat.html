@@ -23,14 +23,15 @@
             </div>
         </div>
     </div> 
-    <div class="form">
+    <form th:action="@{/rooms/{roomId}/messages(roomId=${roomId})}" method="post" th:object="${messageForm}" class="form">
         <div class="form-input">
-            <input type="text" placeholder="type a message" class="type_message">
+            <input th:field="*{content}" placeholder="type a message" class="type_message">
+
             <label class="form-image">
                 <span class="image-file">画像</span>
                 <input type="file" class="hidden">
             </label>
         </div>
         <input type="submit" value="送信" class="send">
-    </div>
+    </form>
 </div>
