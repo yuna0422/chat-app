@@ -81,8 +81,15 @@ public class MessagesController {
         
     MultipartFile imageFile = messageForm.getImage();
 
+    
+if ((messageForm.getContent() == null || messageForm.getContent().isBlank())
+    && (imageFile == null || imageFile.isEmpty())) {
+    return "redirect:/rooms/" + roomId + "/messages";
+}
+
+
     System.out.println("imageFile is null? " + (imageFile == null));
-if (imageFile != null) {
+if (imageFile != null && !imageFile.isEmpty()) {
     System.out.println("originalName = " + imageFile.getOriginalFilename());
     System.out.println("size = " + imageFile.getSize());
 
