@@ -16,6 +16,9 @@
                 </div>
                 <div class="lower-message">
                     <div class="message-content" th:text="${message.content}">メッセージ内容</div>
+                    
+                <img th:if="${message.image != null}" th:src="${message.image}">
+
                 </div>
             </div>
         </div>
