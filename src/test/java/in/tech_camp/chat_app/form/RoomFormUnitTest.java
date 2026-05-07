@@ -32,7 +32,7 @@ public class RoomFormUnitTest {
   }
 
   @Nested
-  class ルームを作成できる場合 {
+  class ルーム作成できる場合 {
     @Test
     public void nameの値が存在すれば作成できる () {
         Set<ConstraintViolation<RoomForm>> violations = validator.validate(roomForm,ValidationPriority1.class);
@@ -41,10 +41,10 @@ public class RoomFormUnitTest {
   }
 
   @Nested
-  class ルームを作成できない場合 {
+  class ルーム作成できない場合 {
     @Test
     public void nameが空では作成できない () {
-        roomForm.setName("");
+        roomForm.setName(" ");
         Set<ConstraintViolation<RoomForm>> violations = validator.validate(roomForm,ValidationPriority1.class);
         assertEquals(1, violations.size());
         assertEquals("Room Name can't blank ", violations.iterator().next().getMessage());
