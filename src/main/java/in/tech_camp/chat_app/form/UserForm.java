@@ -29,6 +29,16 @@ public class UserForm {
 
     //パスワードの暗号化
     public void validatePasswordConfirmation(BindingResult result) {
+
+        
+    if (result == null) {
+        return;
+    }
+
+    if (password == null || passwordConfirmation == null) {
+        return;
+    }
+
       if (!password.equals(passwordConfirmation)) {
           result.rejectValue("passwordConfirmation", "error.user", "Password confirmation doesn't match Password");
       }
